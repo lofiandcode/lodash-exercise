@@ -11,3 +11,4 @@ test/lodash.js
 test/pad.js
 test/test-all.js
 test/words.js
+*.DS_Store
