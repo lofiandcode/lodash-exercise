@@ -43,12 +43,16 @@ const _ = {
 
     pad (string, length) {
         if (length <= string.length) return string;
-        
+
         const startPaddingLength = Math.floor((length - string.length) / 2);
         const endPaddingLength = length - (string.length + startPaddingLength);
         const paddedString = ' '.repeat(startPaddingLength).concat(string, ' '.repeat(endPaddingLength));
         
         return paddedString;
+    },
+
+    has (object, key) {
+        return object[key] !== undefined;
     }
 };
 
