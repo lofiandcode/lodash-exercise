@@ -35,6 +35,10 @@ const _ = {
         };
         //Return true if number is greater than or equal to start AND less than end.
         return (start <= number && number < end)
+    },
+
+    words (string) {
+        return string.split(' ');
     }
 };
 
