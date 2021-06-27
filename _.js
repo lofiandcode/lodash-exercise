@@ -33,8 +33,8 @@ const _ = {
                 start = temp;
             };
         };
-
-
+        //Return true if number is greater than or equal to start AND less than end.
+        return (start <= number && number < end)
     }
 };
 
