@@ -83,6 +83,22 @@ const _ = {
         });
         const droppedArray = this.drop(array, dropNumber);
         return droppedArray;
+    },
+
+    chunk (array, size) {
+        /*
+            - create new empty array
+            - iterate over array and .slice() the chunks of the given size
+                - after to each loop add the size to itself until size > array.length
+            - return new array
+        */
+       if(!size) size = 1;
+       const arrayChunks = [];
+       for(let i = 0; i < array.length; i += size) {
+           const arrayChunk = array.slice(i, (i + size));
+           arrayChunks.push(arrayChunk);
+       }
+       return arrayChunks;
     }
 };
 
