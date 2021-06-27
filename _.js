@@ -62,6 +62,13 @@ const _ = {
             invertedObject[originalValue] = key;
         }
         return invertedObject;
+    },
+
+    findKey (object, predicate) {
+        for(const key in object) {
+            if(predicate(object[key])) return key;
+        }
+        return undefined;
     }
 };
 
