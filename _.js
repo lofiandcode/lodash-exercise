@@ -69,6 +69,11 @@ const _ = {
             if(predicate(object[key])) return key;
         }
         return undefined;
+    },
+
+    drop (array, n) {
+        if(!n) n = 1;
+        return array.slice(n);
     }
 };
 
