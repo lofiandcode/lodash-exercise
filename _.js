@@ -1,17 +1,43 @@
 
 const _ = {
+    /*
+        Ideate clamp Method
+        - in take a number, lower bound, and upper bound
+        - if number greater than the upper bound, return upper bound
+        - if number is lower than the lower bound, return the lower bound
+        - else return the number
+    */
     clamp (number, lower, upper) {
         const lowerClampedValue = Math.max(number, lower);
         const ClampedValue = Math.min(lowerClampedValue, upper);
         return ClampedValue;
+    },
+    /*
+        Ideate inRange Method
+        - check start and end
+            - if no end value, set end to start and start to 0
+            - if start > end, swap the values
+        - if number < start || number >= end, return false
+        - else, return true
+    */
+    inRange (number, start, end) {
+        //handle if end == undefined
+        //else handle if start > end
+        if (!end) {
+            end = start;
+            start = 0;
+        } else {
+            if (start > end) {
+                const temp = end;
+                end = start;
+                start = temp;
+            };
+        };
+
+
     }
 };
-/*
-    - in take a number, lower bound, and upper bound
-    - if number greater than the upper bound, return upper bound
-    - if number is lower than the lower bound, return the lower bound
-    - else return the number
-*/
+
 
 
 
